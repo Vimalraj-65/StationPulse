@@ -12,6 +12,9 @@ try:
 
     data = response.json()
     stations = data["data"]["stations"]
+    
+import csv
+import os
 
     print("Collection time:", datetime.now(timezone.utc), flush=True)
     print("Total stations:", len(stations), flush=True)
