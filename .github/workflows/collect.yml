@@ -22,3 +22,10 @@ jobs:
 
       - name: Run collector
         run: python collector.py
+        
+      - name: Save CSV artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stationpulse-data
+          path: data/station_status.csv
+          if-no-files-found: error
